@@ -1,0 +1,831 @@
+// @import fonts.sass
+*
+  box-sizing: border-box
+body
+  font-family: 'Open Sans', sans-serif !important
+a
+  outline: none !important
+strong
+  font-weight: bold !important
+.hide
+  display: none
+#callback
+  width: 300px
+  margin: 0 auto
+  opacity: 1
+  position: relative
+.mfp-forms
+	.mfp-close
+		color: #ffffff!important
+  &.mfp-bg
+    opacity: 0
+    -webkit-transition: all 0.25s ease-out
+    -moz-transition: all 0.25s ease-out
+    transition: all 0.25s ease-out
+    &.mfp-ready
+      opacity: 0.8
+    &.mfp-removing
+      opacity: 0
+  &.mfp-wrap
+    .mfp-content
+      opacity: 0
+      -webkit-transition: all 0.25s ease-out
+      -moz-transition: all 0.25s ease-out
+      transition: all 0.25s ease-out
+    &.mfp-ready .mfp-content
+      opacity: 1
+    &.mfp-removing .mfp-content
+      opacity: 0
+.buttons
+  text-decoration: none
+  font-weight: 600
+  font-size: 20px
+  color: #111111
+  background-color: #f39f18
+  border: none
+  display: inline-block
+  box-shadow: 0 3px #b97200
+  &:hover
+    background-color: #ffac28
+  &:active
+    background-color: #e3900b
+.buttons-wrap
+  text-align: center
+
+// Header
+.header
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  position: relative
+  color: #ffffff
+  &::before
+    content: ''
+    width: 100%
+    height: 100%
+    background-color: #556475
+    display: block
+    position: absolute
+    opacity: 0.85
+  .top-line
+    padding-top: 45px
+    background-image: url(../img/top_gradient.png)
+    background-repeat: repeat-x
+    min-height: 160px
+  &-logo
+    width: 100px
+    opacity: 0.9
+  &-menu
+    font-size: 14px
+    li
+      display: inline-block
+      padding-right: 11px
+    &__links
+    &__link
+      color: #ffffff
+      text-decoration: none
+      &:hover
+        color: #f39f18
+        text-decoration: underline
+        transition: 0.3s
+  .phone-wrap
+    position: relative  
+  &-phone
+    font-size: 19px
+    text-align: right
+    opacity: 0.8
+  .btn-menu
+    position: absolute
+    top: 0
+    right: 0
+    display: none
+  .btn-menu
+    width: 28px
+    height: 30px
+    margin-top: 10px 
+  .btn-menu span:after,
+  .btn-menu span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: -9px
+  .btn-menu span:after
+    top: 9px
+  .btn-menu span
+    position: relative
+    display: block
+  .btn-menu span,
+  .btn-menu span:after,
+  .btn-menu span:before 
+    width: 100%
+    height: 2px
+    background-color: #fff
+    opacity: 0.9
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+  .btn-menu.on span 
+    background-color: transparent
+  .btn-menu.on span:before 
+    transform: rotate(45deg) translate(5px, 5px)
+  .btn-menu.on span:after 
+    transform: rotate(-45deg) translate(7px, -8px)
+  .btn-menu.on + #menu 
+    opacity: 1
+    visibility: visible
+
+// Subheader
+.subheader
+  margin-top: 50px
+  padding-bottom: 50px
+  &-left
+    margin-bottom: 50px
+    &__title
+      font-size: 48px
+      border-bottom: 6px solid #f39f18
+      display: inline-block
+      padding-bottom: 11px
+      margin-bottom: 45px
+      margin-top: 100px
+    &__links
+      li
+        padding-left: 15px
+        &::before
+        content: ''
+        background-image: url(../img/icons/section_1/arrow.png)
+        background-repeat: no-repeat
+        background-position: left 
+    &__link
+      font-size: 18px
+      line-height: 27px
+      text-decoration: none
+      color: #ffffff
+      &:hover
+        color: #f39f18
+        transition: all 0.5s ease
+        text-decoration: underline
+  &-right
+  &-form
+    background-color: #2d3c4c
+    opacity: 0.8
+    &__title
+       font-size: 30px
+       margin-bottom: 15px
+			 color: #ffffff
+    &__subtitle
+      font-size: 16px
+      line-height: 20px
+      color: #929eac
+      margin-bottom: 20px
+    &__label
+      font-size: 13px
+      color: #778390
+      letter-spacing: 1.2px
+      display: block
+      margin-bottom: 24px
+    &__span
+      display: block
+      margin-bottom: 9px
+    &__input
+      width: 100%
+      background-color: #34465a
+      border: none
+      text-indent: 10px
+      padding: 13px 0
+      box-shadow: 0 -4px #1f2a36
+      color: #ffffff
+      font-size: 18px
+      &:focus
+        background-color: #44515f
+    &__btn
+      padding: 15px 40px
+.forms
+  padding: 35px 30px 30px
+  box-shadow: 0 4px #1a222b
+.arrow-wrap
+  position: relative
+  z-index: 99
+  padding-bottom: 70px
+.arrow-button
+  background-image: url(../img/arrow_down.png)
+  width: 40px
+  height: 40px
+  display: block
+  margin: 0 auto
+  opacity: 0.5
+  transition: all .5s ease
+  &:hover
+    cursor: pointer
+    opacity: 1
+
+// Section
+.section
+  padding-top: 60px
+  background-color: #f9f9f9
+  position: relative
+  &::before
+    content: ''
+    height: 6px
+    width: 100%
+    background-image: url(../img/bah_1.png)
+    position: absolute
+    top: -6px
+  &-content
+    background-image: url(../img/s1_gray_bg.png)
+    background-repeat: no-repeat
+    background-position: top
+    position: relative
+    padding-bottom: 90px
+    &__wrap
+      margin-top: 48px
+      &:nth-child(2)
+        margin-top: 0
+    &__block
+      padding-left: 34px
+      height: 112px
+      max-width: 320px
+    &__title
+      margin-bottom: 22px
+    &__link
+       color: #f39f18
+       font-size: 22px
+       &:hover
+         text-decoration: none
+    &__subtitle
+      color: #111111
+      font-size: 15px
+      padding-bottom: 20px
+      border-bottom: 1px solid #dee1e5
+    &__triangle
+      background-image: url(../img/s1_triangle.svg)
+      width: 100%
+      height: 67px
+      position: absolute
+      bottom: 0
+      background-position: top
+      background-size: 100% 100%
+      text-align: center
+      z-index: 2
+    &__image1
+      width: 116px
+      margin-top: 33px
+    &__image2
+      width: 159px
+      position: absolute
+      top: -130px
+      left: 50%
+      transform: translate(-50%,0)
+      z-index: -1
+  &-content
+    &__bottom
+      background-color: #394b5f
+      padding: 15px 0 65px
+    &__wrap1
+      &:nth-child(2)
+        margin-top: 65px
+    &__subtitle1
+      color: #ffffff
+      padding-bottom: 20px
+      border-bottom: 1px solid #546476
+  &-head
+    margin: 0 auto
+    margin-bottom: 65px
+    &__title
+						line-height: 35px	
+      font-size: 30px
+      text-transform: uppercase
+      text-align: center
+      color: #2c3949
+      position: relative
+      margin-bottom: 30px
+      &::before
+        content: ''
+        width: 165px
+        height: 4px
+        background-color: #f39f18
+        position: absolute
+        display: block
+        bottom: -15px
+        left: 50%
+        transform: translate(-50%)
+    &__subtitle
+      font-size: 15px
+      line-height: 20px
+      color: #333333
+      text-align: center
+    &__link
+      color: #f39f18
+      &:hover
+        text-decoration: none
+  &-down
+    background-color: #2c3949
+    padding-top: 65px
+    padding-bottom: 55px
+    &__gray
+      background-color: #e5e5e5
+    &__btn
+      padding: 14px 37px
+    
+// Deal
+.deal
+  &-title
+				line-height: 35px
+    font-size: 24px
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 81px
+   	&__link
+      color: #f39f18
+						transition: all .5s ease
+      &:hover
+       	text-decoration: none
+  &-wrap
+    text-align: center
+    display: inline-block
+    margin-bottom: 85px
+				transition: all .5s ease
+				&:hover
+					transform: scale(1.10)
+    .img-wrap
+      position: relative
+      padding-bottom: 35px
+      line-height: 60px
+      &::before
+        content: ''
+        height: 1px
+        width: 59px
+        background-color: #f39f18
+        position: absolute
+        display: block
+        left: 50%
+        bottom: 0
+        transform: translate(-50%,0)
+    &__img
+      max-width: 75px
+      max-height: 60px
+      display: inline-block
+      margin-bottom: 45px
+    &__description
+      color: #111111
+      display: block
+      font-size: 13px
+      font-weight: 600
+      line-height: 16px
+      &:hover
+        color: #f39f18
+        text-decoration: none
+
+// Accounting
+.section
+  &-down
+    &__acc
+      background-color: #394b5f
+      margin-top: 35px
+  &-dark
+    background-color: #2c3949
+    &::before
+      background-image: url(../img/bah_2.png)
+  &-head
+    &__titlew
+      color: #f9f9f9
+    &__subtitlew
+      color: #f9f9f9
+.acc
+  margin-bottom: 30px
+  &-content
+    background-image: url(../img/s3_sun_bg.png)
+    background-repeat: no-repeat
+    background-position: center
+    min-height: 850px
+    padding-top: 100px
+  &-wrap
+    margin-bottom: 89px
+    padding-left: 34px
+    &:nth-child(1),&:nth-child(3)
+      margin-top: 60px
+    &:nth-child(4),&:nth-child(6)
+      margin-top: 40px
+    &:nth-child(7),&:nth-child(9)
+      margin-top: 60px
+    &:nth-child(8)
+      margin-top: 140px 
+    &__img
+      width: 120px
+      height: 120px
+      background-color: #f39f18
+      text-align: center
+      border-radius: 100px
+      padding-top: 30px
+      margin: 0 auto
+      margin-top: 50px
+      img
+        width: 60px
+    &__title
+      margin-bottom: 22px
+    &__link
+      font-size: 22px
+      color: #f39f18
+      &:hover
+        text-decoration: none
+    &__subtitle
+      font-size: 14px
+      color: #f9f9f9
+
+// Features
+.section-pb
+  padding-bottom: 50px
+.features
+  background-color: #e5e5e5
+  &::before
+    background-image: url(../img/bah_3.png)
+  &-title
+    text-align: center
+    text-transform: uppercase
+    font-size: 24px
+    margin-bottom: 57px
+  &-blocks
+    perspective: 600px
+  &-block
+    background-color: #2c3949
+    width: 260px
+    padding: 54px 28px 48px
+    text-align: center
+    margin: 0 12px 30px
+    display: inline-block 
+    border-bottom: #1A222B 4px solid
+    transition: all .5s ease
+    &:hover
+      transform: scale(1.08)
+      cursor: pointer
+    &__wrap
+      width: 120px
+      height: 120px
+      background-color: #f39f18
+      line-height: 120px
+      margin-bottom: 40px
+      border-radius: 100px
+      display: inline-block
+    &__bold
+      color: #f39f18
+    &__img
+      width: 70px
+    &__title
+      font-size: 16px
+      text-transform: uppercase
+      margin-bottom: 24px
+      color: #ffffff
+    &__description
+      font-size: 14px
+      color: #97a4b2
+      line-height: 15px
+.section-down__features
+  background-color: #d6d6d6
+
+// work
+.work
+  &-blocks
+    margin-top: 50px
+    margin-bottom: 70px
+    text-align: center
+  &-block
+    width: 290px
+    height: 139px
+    display: inline-block
+    text-align: center
+    position: relative
+    transition: all .5s ease 
+    &:first-child
+      margin-left: 0
+    &:hover
+      transform: scale(1.08)
+      cursor: pointer
+    svg
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 0
+  &-content
+    position: relative
+    z-index: 1
+    margin-top: 40px
+    margin-left: 40px
+    padding-left: 10px
+    &__img
+      height: 40px
+      float: left
+      padding-right: 15px
+    &__title
+      text-align: left
+    &__link
+      color: #ffffff
+      text-decoration: none
+      font-size: 18px
+      &:hover
+        text-decoration: underline
+    &__bold
+      font-size: 24px
+      font-weight: bold
+
+// team
+.team
+  &-blocks
+  &-block
+    background-color: #e5e5e5
+    border: none
+    transition: all .5s ease
+    &:hover
+      transform: scale(1.08)
+      cursor: pointer
+    &__wrap
+      background-color: transparent
+    &__img
+      width: 120px
+      border-radius: 100px
+      border: 5px solid #d6d6d6
+    &__title
+      font-size: 13px
+      color: #000000
+    &__description
+      font-size: 12px
+      margin-bottom: 26px
+    &__phone
+      font-size: 16px
+      font-weight: 600
+      color: #000000
+      text-decoration: none
+
+// feedback
+.feedback
+  &-slider
+    text-align: center
+    margin-bottom: 20px
+  &-slide
+    position: relative
+    &__wrap
+    &__img
+      width: 116px !important
+      height: 116px !important
+      border-radius: 100px
+      box-shadow: 0 0 0 8px #f39f18
+      display: inline-block !important
+      margin-top: 10px
+      margin-bottom: 34px
+    &__title
+      font-size: 18px
+      font-weight: 600
+      margin-bottom: 17px
+    &__subtitle
+      font-size: 13px
+      color: #A4AAB2
+      margin-bottom: 25px
+    &__description
+      font-size: 15px
+      line-height: 17px
+.owl-item
+    .feedback-slide__img
+      opacity: 0
+      transform: translate3d(200px, 0, 0)
+      transition: all .7s ease
+      transition-delay: .1s
+    .feedback-slide__title,.feedback-slide__subtitle
+      opacity: 0
+      transform: translate3d(200px, 0, 0)
+      transition: all .7s ease
+      transition-delay: .5s
+    .feedback-slide__description
+      opacity: 0
+      transform: translate3d(200px, 0, 0)
+      transition: all 1s ease
+      transition-delay: .9s
+    &.active
+      .feedback-slide__img,.feedback-slide__title,.feedback-slide__subtitle,.feedback-slide__description
+        opacity: 1
+        transform: translate3d(0, 0, 0)
+.owl-dot
+  width: 10px
+  height: 10px
+  background-color: #ccc !important
+  text-align: center
+  display: inline-block
+  margin-right: 5px
+  margin-left: 5px
+  margin-top: 30px
+  border-radius: 5px
+  &.active
+    background-color: #f39f18 !important
+.owl-nav
+  position: absolute
+  top: 13%
+  width: 100%
+  > button
+    background-image: url(../img/slider_arrows.png) !important
+    height: 29px !important
+    width: 16px !important
+    position: absolute
+    left: 20px
+    opacity: 0.5
+    transition: all .3s ease
+    &:hover
+      opacity: 1
+  .owl-next
+    right: 20px
+    left: auto
+    background-position: -16px 0 !important
+   
+// prof
+.prof
+  &-left
+  &-head
+    &__title
+      text-align: left
+      &::before
+        transform: none
+        left: 0
+    &__subtitle
+      text-align: left
+  &-items
+    text-align: center
+    margin-bottom: 20px
+  &-item
+	  	transition: all .5s ease
+				&:hover
+					transform: scale(1.10)
+					cursor: pointer
+    &__img
+      height: 72px
+      margin-bottom: 20px
+    &__description
+      font-size: 13px
+      font-weight: bold
+  &-right
+  &-form
+    box-shadow: none
+    background-color: #ddd
+    &__title
+      color: #505864
+    &__subtitle
+      color: #5E6267
+    &__input
+      background-color: #C0C0C0
+      box-shadow: none
+      color: #000000
+      &:focus
+        background-color: #ffffff
+
+// footer
+.footer
+  &-content
+    padding-bottom: 60px
+    .header-logo
+      opacity: .35
+    .header-menu__link
+      color: #BFC2C5
+    .header-phone
+      color: #ffffff
+      opacity: 0.45
+.top
+  background-color: #1F2B3A
+  height: 40px
+  background-image: url(../img/top.png)
+  background-repeat: no-repeat
+  background-position: center
+  cursor: pointer
+      
+// media
+@media ( max-width: 1200px  )
+  .header
+    &-menu
+      display: none
+      position: relative
+      &__links
+        min-width: 290px
+        background-color: #273646
+        display: flex
+        flex-direction: column
+        text-align: right
+        position: absolute
+        right: -240px
+        top: 20px
+        z-index: 2
+        opacity: 0.95
+        li
+          padding: 0
+          border-top: 1px solid  #ffffff9b  
+      &__link
+        padding: 0 15px
+        display: block
+        margin: 5px 0
+        line-height: 40px
+        font-size: 18px
+        &:hover
+          background-color: #34465a
+          transition: all 0.5s ease
+    &-phone
+      padding-right: 50px
+    .btn-menu
+      display: block
+  .acc
+    &-wrap
+      margin-bottom: 89px
+      padding-left: 34px
+      &:nth-child(1),&:nth-child(3)
+        margin-top: 0
+      &:nth-child(4),&:nth-child(6)
+        margin-top: 0
+      &:nth-child(7),&:nth-child(9)
+        margin-top: 0
+      &:nth-child(8)
+        margin-top: 0 
+      &__img
+        display: none
+  .section
+    &-down
+      &__acc
+        background-color: #394b5f
+        margin-top: 20px
+
+@media ( max-width: 992px  )
+  .prof
+    &-head
+      &__title
+        text-align: center
+        &::before
+          transform: translate(-50%)
+          left: 50%
+      &__subtitle
+        text-align: center
+  .subheader
+    margin-top: 0
+    &-left
+      &__title
+        margin-top: 0
+  .header
+    &-menu
+      &__links
+        right: -30px
+  .acc
+    &-content
+      background-image: none
+      min-height: 0
+      padding-top: 0
+  .section
+    &-down
+      &__acc
+        background-color: #394b5f
+        margin-top: 0
+        
+@media ( max-width: 768px  )
+  .prof
+    &-item
+      margin-bottom: 20px
+  .section
+    &-head
+      margin-bottom: 30px
+    &-content
+      background-position: bottom
+      &__subtitle
+        border-color: #76787a
+      &__wrap
+        margin: 0
+        &:nth-child(2)
+          margin-bottom: 20px
+      &__wrap1
+        &:first-child
+          margin-top: 30px
+        &:nth-child(2)
+          margin-top: 0     
+      &__block
+        max-width: 100%
+      &__image2
+        display: none
+  .acc
+    &-wrap
+      border-bottom:  #D6DAE0 1px solid
+      margin-bottom: 50px
+      padding-bottom: 20px
+  
+@media ( max-width: 576px)
+  .header
+    &-menu
+      float: none
+      margin-top: 20px
+      &__links
+        right: 30px
+        
+    &-logo
+      width: 70px
+    &-phone
+      font-size: 18px
+      
+@media ( max-width: 449px)
+		.section-content__block
+			margin-bottom: 20px
+  .header
+    &-menu
+      &__links
+        right: 0
+
+@media ( min-width: 1200px)
+  .header
+    &-menu
+      display: block
